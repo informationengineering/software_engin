@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<title>會員註冊</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a href="../L/login.html">登入</a>
+    <a href="register.html">註冊</a>
+  </nav>
+
+  <h2>會員註冊</h2>
+  <form id="registerForm">
+    <label>身分證字號
+      <input id="regId" type="text" required />
+    </label>
+
+    <label>姓名
+      <input id="regName" type="text" required />
+    </label>
+
+    <label>Email
+      <input id="regEmail" type="email" required />
+    </label>
+
+    <label>密碼
+      <input id="regPwd" type="password" required />
+    </label>
+
+    <label>確認密碼
+      <input id="regPwd2" type="password" required />
+    </label>
+
+    <label>手機
+      <input id="regPhone" type="text" required />
+    </label>
+
+    <label>生日
+      <input id="regBirth" type="date" required />
+    </label>
+
+    <label>忘記密碼題目 (你自己輸入)
+      <input id="regPwdQ" type="text" required />
+    </label>
+
+    <label>忘記密碼答案
+      <input id="regPwdA" type="text" required />
+    </label>
+
+    <label>付款帳號
+      <input id="regPay" type="text" required />
+    </label>
+
+    <button type="submit">註冊</button>
+    <div class="note" id="regNote"></div>
+  </form>
+</div>
+
+<script src="../js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<title>會員資料</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a href="../L/login.html">登入</a>
+    <a href="../S/register.html">註冊</a>
+  </nav>
+
+  <h2>會員資料</h2>
+
+  <div id="profileArea">
+    <form id="profileForm">
+      <label>姓名 <input id="pName" type="text" /></label>
+      <label>Email <input id="pEmail" type="email" /></label>
+      <label>手機 <input id="pPhone" type="text" /></label>
+      <label>生日 <input id="pBirth" type="date" /></label>
+      <label>付款帳號 <input id="pPay" type="text" /></label>
+
+      <div class="profile-row">
+        <div><button id="btnSave" type="button">儲存修改</button></div>
+        <div><button id="btnLogout" class="secondary" type="button">登出</button></div>
+      </div>
+
+      <div class="note" id="profileNote"></div>
+    </form>
+  </div>
+</div>
+
+<script src="../js/profile.js"></script>
+</body>
+</html>

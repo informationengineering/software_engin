@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<title>會員登入</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container">
+  <nav>
+    <a href="../index.html">首頁</a>
+    <a href="login.html">登入</a>
+    <a href="../S/register.html">註冊</a>
+    <a href="forget.html">忘記密碼</a>
+  </nav>
+
+  <h2>會員登入</h2>
+  <form id="loginForm">
+    <label>
+      Email
+      <input id="inputEmail" type="email" required />
+    </label>
+    <label>
+      密碼
+      <input id="inputPassword" type="password" required />
+    </label>
+    <button id="btnLogin" type="submit">登入</button>
+    <button id="btnLogout" type="button" class="secondary" style="display:none">登出</button>
+    <div class="note" id="loginNote"></div>
+  </form>
+</div>
+
+<script src="../js/login.js"></script>
+</body>
+</html>

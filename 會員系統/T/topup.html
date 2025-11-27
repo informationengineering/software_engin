@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>會員儲值系統</title>
+</head>
+<body>
+
+<h2>會員儲值</h2>
+
+<!-- T3 使用者輸入會員編號 -->
+<label>會員編號（身分證字號）</label><br>
+<input id="memberIdInput" type="text" placeholder="例如：A123456789"><br><br>
+
+<!-- 顯示目前餘額 -->
+<button onclick="searchBalance()">查詢餘額</button>
+<p id="balanceDisplay">餘額：--</p>
+
+<hr>
+
+<!-- T1 儲值卡儲值 -->
+<label>儲值金額</label><br>
+<input id="amountInput" type="number" min="0" placeholder="輸入儲值金額"><br><br>
+
+<!-- T3 輸入扣款銀行帳號 -->
+<label>銀行帳號</label><br>
+<input id="payAccountInput" type="text" placeholder="請輸入銀行帳號"><br><br>
+
+<!-- 執行儲值 -->
+<button onclick="topUpCard()">儲值</button>
+
+<p id="resultMsg"></p>
+
+<script src="../js/topup.js"></script>
+</body>
+</html>
