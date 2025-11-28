@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>威秀影城 VIESHOW CINEMAS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        /* 全站基礎設定：藍色系 + 白底 */
+        :root {
+            --primary-blue: #007bff; /* 威秀風格亮藍色 */
+            --dark-bg: #111;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            font-family: "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* 輪播區塊 */
+        .swiper {
+            width: 100%;
+            height: auto; /* 設定輪播高度 */
+            background-color: #000;
+        }
+
+        .swiper-slide {
+            position: relative;
+            display: flex;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            /*object-fit: cover; /* 讓圖片填滿 */
+            /*object-position: center top; /* 強制對齊頂部 */
+        }
+
+        /* 左下角：電影標題與標語 */
+        .slide-info {
+            position: absolute;
+            bottom: 40px;
+            left: 50px;
+            z-index: 10;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.8);
+            pointer-events: none; /* 讓點擊可以穿透到連結 */
+        }
+
+        .slide-info h2 {
+            color: #fff;
+            font-size: 3.5rem;
+            margin: 0;
+            font-style: italic;
+            font-weight: 900;
+        }
+
+        .slide-info p {
+            color: #ddd;
+            font-size: 1.5rem;
+            margin: 10px 0 0 0;
+            font-weight: bold;
+        }
+
+        /* 右下角：快速訂票區塊 (半透明黑底) */
+        .booking-overlay {
+            position: absolute;
+            bottom: 40px;
+            right: 50px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 15px 20px;
+            border-radius: 5px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-width: 150px;
+        }
+
+        .booking-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .booking-link:hover {
+            color: var(--primary-blue);
+        }
+
+        /* 模擬前面的小圖示 */
+        .booking-link::before {
+            content: '▫'; 
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        /* 輪播箭頭改為簡單白色 */
+        .swiper-button-next, .swiper-button-prev {
+            color: rgba(255,255,255,0.7) !important;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: var(--primary-blue) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar"></div>
+
+    <div class="swiper">
+        <div class="swiper-wrapper" id="banner-container">
+            </div>
+        
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="home.js"></script>
+</body>
+</html>
