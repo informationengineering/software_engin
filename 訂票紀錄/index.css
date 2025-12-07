@@ -1,0 +1,276 @@
+/* 基礎設定 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    gap: 20px;
+}
+
+/* 左右面板通用樣式 */
+.main-content, .sidebar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    flex: 2; 
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1; 
+    padding: 0;
+    /* 確保圓角效果在頂部 */
+    overflow: hidden; 
+}
+
+/* --- 左側：訂票紀錄區 --- */
+
+.record-box .header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.record-box h2 {
+    color: #333;
+    font-size: 20px;
+    margin: 0 0 5px 0;
+}
+
+.record-box .email {
+    color: #1a73e8; 
+    font-weight: bold;
+}
+
+.record-box .note {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Tab切換按鈕容器 */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.tab-button:hover,
+.tab-button.active {
+    color: #1a73e8;
+    border-bottom: 3px solid #1a73e8;
+    font-weight: bold;
+}
+
+/* 內容區塊 */
+.tab-content {
+    display: none; 
+}
+
+.tab-content.active {
+    display: block; 
+}
+
+.no-record {
+    padding: 30px;
+    text-align: center;
+    color: #999;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+}
+
+.ticket-types-info {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+/* --- 右側：會員專區 --- */
+
+.member-area {
+    /* 讓整個卡片使用相對定位，方便子元素定位 */
+    position: relative;
+    padding-top: 50px; /* 為藍色 header 預留空間 */
+}
+
+.member-header {
+    /* 定位到卡片頂端，佔滿寬度 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: #3b82f6; 
+    color: white;
+    padding: 15px 20px; 
+    
+    /* 調整邊界與圓角 */
+    margin: 0; 
+    border-radius: 8px 8px 0 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left; /* 保持左對齊 */
+    box-sizing: border-box; /* 確保 padding 不增加寬度 */
+}
+
+.member-info {
+    /* 將 padding 應用於 member-info */
+    padding: 0 20px 20px 20px; 
+    text-align: center;
+}
+
+/* 等級徽章 */
+.level-badge {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px; /* 增加徽章與藍色header的距離 */
+    margin-bottom: 15px;
+}
+
+.level-badge .badge-content {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background-color: #f7d1da; 
+    color: #e54d76; 
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 auto;
+    border: 3px solid #e54d76; 
+}
+
+.level-badge .level-name {
+    margin-top: 5px;
+    color: #666;
+    font-size: 14px;
+}
+
+.member-name {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.member-id {
+    font-size: 18px;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* 條碼模擬 */
+.barcode-placeholder {
+    width: 100%;
+    height: 50px;
+    background: repeating-linear-gradient(
+        90deg, 
+        black 0 3px, 
+        white 3px 6px
+    ); 
+    margin-bottom: 20px;
+}
+
+/* 財務資訊 */
+.finance-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 5px 0;
+}
+
+.finance-label {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+.finance-value {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0000; 
+}
+
+.finance-button {
+    background-color: #e0f0ff;
+    border: 1px solid #1a73e8;
+    color: #1a73e8;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap; 
+    transition: background-color 0.3s;
+}
+
+.finance-button:hover {
+    background-color: #c9e2ff;
+}
+
+/* 會籍詳情 */
+.membership-details {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.membership-details p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+.membership-details .highlight {
+    color: #e54d76;
+    font-weight: bold;
+}
+
+.membership-details a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.store-value-button {
+    display: block;
+    width: 100%;
+    background-color: #ffb700;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.store-value-button:hover {
+    background-color: #ff9900;
+}
