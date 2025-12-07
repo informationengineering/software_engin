@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>訂票紀錄查詢 - 威秀影城</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="section-box record-box">
+                <div class="header">
+                    <h2>訂票信箱 <span class="email">someone@gmail.com</span></h2>
+                    <p class="note">若購票失敗您的付款授權將取消不收取任何費用，回於 30 分鐘後重新確認。</p>
+                </div>
+
+                <div class="tabs">
+                    <button class="tab-button active" data-target="payment-record">付款購票記錄</button>
+                    <button class="tab-button" data-target="stored-value-bill">儲值卡訂票記錄</button>
+                </div>
+
+                <div id="payment-record" class="tab-content active">
+                    <p class="no-record">尚無任何付款購票記錄。</p>
+                </div>
+
+                <div id="stored-value-bill" class="tab-content">
+                    <p class="no-record">尚無任何儲值卡訂票記錄。</p>
+                </div>
+
+                <div class="ticket-types-info">
+                    <p><strong>票種說明：</strong>全票、優待、敬老、愛心、iShow儲值金票</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="section-box member-area">
+                <div class="member-header">
+                    會員專區
+                </div>
+                
+                <div class="member-info">
+                    <div class="level-badge">
+                        <span class="level-number">8</span>
+                        <p class="level-name">一般影迷</p>
+                    </div>
+
+                    <h3 class="member-name">Hi！呂品燕</h3>
+                    
+                    <p class="member-id">9552101122100604</p>
+                    <div class="barcode-placeholder"></div>
+                    
+                    <div class="finance-item">
+                        <span class="finance-label">儲值金餘額:</span>
+                        <span class="finance-value">$0</span>
+                        <button class="finance-button">儲值記錄</button>
+                    </div>
+
+                    <div class="finance-item">
+                        <span class="finance-label">年度消費金額:</span>
+                        <span class="finance-value">$0</span>
+                        <button class="finance-button">信用卡紀錄</button>
+                    </div>
+
+                    <div class="membership-details">
+                        <p>ℹ️ 12/31前再消費5000元，即可成為黃金會員。</p>
+                        <p>會籍期限: <span class="highlight">永久會員</span></p>
+                        <p><a href="#">點我了解會員權益</a></p>
+                    </div>
+
+                    <button class="store-value-button">我要儲值 💳</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
