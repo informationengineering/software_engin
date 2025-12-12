@@ -20,6 +20,7 @@ app.use('/api/member', memberRoutes);
 app.use('/api/movie', movieRoutes);
 
 // 訂票/紀錄組員用的網址開頭都是 /api/booking
+const bookingRouter = require('./routes/booking');
 app.use('/api/booking', bookingRoutes);
 
 // 4. 啟動伺服器
