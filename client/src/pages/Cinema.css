@@ -1,0 +1,97 @@
+/* client/src/pages/Cinema.css */
+
+.cinema-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.page-title {
+    font-size: 2rem;
+    color: #333;
+    border-left: 5px solid #007bff; /* 藍色裝飾線 */
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+/* 網格系統：自動排版，手機一行一個，電腦一行三個 */
+.cinema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* 影城卡片 */
+.cinema-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #fff;
+}
+
+.cinema-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 圖片區 */
+.cinema-img-box {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.cinema-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 填滿不變形 */
+    transition: transform 0.5s;
+}
+
+.cinema-card:hover .cinema-img-box img {
+    transform: scale(1.1); /* 滑鼠移過去圖片放大 */
+}
+
+/* 資訊區 */
+.cinema-info {
+    padding: 20px;
+}
+
+.cinema-info h3 {
+    margin: 0 0 15px 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.cinema-detail-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cinema-detail-row i {
+    margin-right: 10px;
+    font-style: normal;
+    font-size: 1.2rem;
+}
+
+.map-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.map-link:hover {
+    background-color: #0056b3;
+}

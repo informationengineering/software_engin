@@ -1,0 +1,28 @@
+/* client/src/index.css */
+
+:root {
+  --primary-blue: #007bff;
+  font-family: "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+/* 修正 Swiper 箭頭顏色 (原本是藍色，改回半透明白) */
+.swiper-button-next, .swiper-button-prev {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* 修正下方分頁點顏色 */
+.swiper-pagination-bullet-active {
+  background: var(--primary-blue) !important;
+}
+
+/* 確保 Swiper 容器滿版 */
+.swiper {
+  width: 100%;
+  height: 100%;
+}

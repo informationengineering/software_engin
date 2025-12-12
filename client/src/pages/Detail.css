@@ -1,0 +1,149 @@
+/* client/src/pages/Detail.css */
+
+.movie-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  background-color: #000; /* 黑底 */
+  color: #fff;            /* 白字 */
+}
+
+/* 麵包屑 */
+.breadcrumb {
+  background-color: #222; /* 深灰底 */
+  padding: 10px 50px;
+  font-size: 0.9rem;
+  color: #bbb;            /* 淺灰字 */
+}
+
+/* 上半部：電影資訊區 */
+.movie-header-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.poster-box {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.poster-box img {
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(255,255,255,0.1); /* 改成淺色陰影 */
+}
+
+.info-box {
+  flex: 1; 
+  max-width: 500px;
+  text-align: left;
+}
+
+.tags span {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  color: white;
+  font-size: 0.85rem;
+  margin-right: 5px;
+}
+.tag-rating { background-color: #5cb85c; }
+.tag-hot { background-color: #f0ad4e; }
+
+.movie-title {
+  font-size: 2.5rem;
+  margin: 15px 0 5px 0;
+  color: #fff; /* 白標題 */
+  font-weight: bold;
+}
+
+.info-grid {
+  color: #ccc; /* 淺灰內文 */
+  line-height: 2;
+  font-size: 1rem;
+  border-top: 1px solid #444; /* 深灰分隔線 */
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.info-grid p { margin: 5px 0; }
+
+/* 預告片區 */
+.trailer-section {
+  background-color: #111; /* 極深灰底 */
+  padding: 50px 0;
+  text-align: center;
+}
+.video-container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  background: #000;
+}
+.video-container iframe {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+/* 劇情簡介 */
+.story-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.story-title {
+  color: #4dabf7; /* 淺藍色標題 */
+  font-size: 1.8rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.story-content {
+  line-height: 2;
+  color: #ddd; /* 淺白內文 */
+  font-size: 1.1rem;
+  text-align: justify;
+  white-space: pre-wrap;
+}
+
+/* 右側影城列表 */
+.booking-panel {
+  width: 320px;
+  border-left: 1px solid #444; /* 深灰分隔線 */
+  padding-left: 30px;
+  color: #fff;
+}
+
+.booking-panel h3 {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.cinema-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #444;
+}
+
+.cinema-list li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #444;
+  font-size: 0.95rem;
+  color: #bbb;
+}
+
+.cinema-list li a {
+  text-decoration: none;
+  color: #4dabf7; /* 淺藍連結 */
+  display: block;
+  transition: color 0.2s;
+}
+
+.cinema-list li a:hover {
+  color: #fff;
+}
