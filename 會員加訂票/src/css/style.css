@@ -1,0 +1,53 @@
+/* 共用樣式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.4;
+  background: #f7f9fc;
+  color: #222;
+}
+
+.container {
+  max-width: 480px;
+  margin: 30px auto;
+  padding: 18px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+nav {
+  margin-bottom: 12px;
+}
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+h2 { margin-top:0; }
+
+form label { display:block; margin-bottom:10px; }
+input, select {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top:6px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #cdd7e0;
+  background: #fff;
+}
+button {
+  padding: 8px 14px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button.secondary {
+  background: #6c757d;
+}
+small.error { color: #d9534f; display:block; margin-top:6px; }
+.profile-row { display:flex; gap:8px; }
+.profile-row > div { flex:1; }
+.note { font-size:0.9rem; color:#666; margin-top:8px; }
