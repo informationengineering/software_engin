@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import './Detail.css';
+import QuickBookingSidebar from '../components/QuickBookingSidebar'; 
 
 function Detail() {
     const { id } = useParams();
@@ -131,8 +132,10 @@ function Detail() {
                     {movie.movieInfo}
                 </div>
             </div>
+            <QuickBookingSidebar />
         </div>
     );
 }
+
 
 export default Detail;
