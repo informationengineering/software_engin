@@ -1,0 +1,127 @@
+/* 1. 側邊按鈕樣式 */
+.sidebar-btn {
+    position: fixed;
+    right: 0;
+    top: 30%; /* 距離頂部 30% 的位置 */
+    background-color: #666; /* 深灰色底 */
+    color: white;
+    padding: 15px 10px;
+    border-radius: 5px 0 0 5px; /* 左邊圓角 */
+    cursor: pointer;
+    z-index: 1000;
+    writing-mode: vertical-rl; /* 文字直排 */
+    text-orientation: upright;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    box-shadow: -2px 2px 5px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+}
+
+.sidebar-btn:hover {
+    background-color: #007bff; /* hover 變藍色 */
+}
+
+/* 2. 彈出視窗遮罩 (黑底半透明) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 2000; /* 最上層 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 3. 彈出視窗本體 (藍色框) */
+.modal-content {
+    background-color: #007bff; /* 威秀藍 */
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px; /* 寬度限制，看起來像方塊 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    color: white;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 10px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.modal-header span {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* 下拉選單樣式 */
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.qb-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.qb-group select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    background: #fff;
+    color: #333;
+}
+
+/* 按鈕樣式 */
+.qb-btn-modal {
+    background-color: #ffc107; /* 黃色按鈕 */
+    color: #000;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background 0.2s;
+}
+
+.qb-btn-modal:hover {
+    background-color: #e0a800;
+}
